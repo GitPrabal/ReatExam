@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import Pokemon from './Pokemon';
 
 
-/*
 class App extends Component {
   render(){
     return(
@@ -18,7 +17,7 @@ class App extends Component {
 
 export default App;
 
-*/
+/*
 
 
 
@@ -41,7 +40,10 @@ class App extends Component {
 
 
   makeHttpRequestWithPage = async pageNumber => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${pageNumber}`, {
+   
+
+  
+    const response = await fetch(`https://reqres.in/api/users?offset=0&page=${pageNumber}`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -50,6 +52,8 @@ class App extends Component {
     });
 
     const data = await response.json();
+
+    console.log()
 
     this.setState({
       users: data.data,
@@ -126,3 +130,4 @@ export default App;
 
 
 
+*/

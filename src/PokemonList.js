@@ -26,6 +26,9 @@ class PokemonList extends Component {
             {id}
           </td>
           <td>
+            {this.props.pokemon}
+          </td>
+          <td>
             <img
               className="sprites" alt={id+"image"}
               src={`http://pokestadium.com/sprites/xy/${this.state.isBack

@@ -35,22 +35,21 @@ class Pokemon extends Component {
   // }
 
   async componentDidMount() {
-    const res = await axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=5');
+    const res = await axios.get('https://pokeapi.co/api/v2/pokemon/?offset=5&limit=10');
     this.setState({ pokemon: res.data['results'] })
   }
-  state = {
-    url: 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100',
-    pokemon: null
-  };
   render(){
     let { pokemon } = this.state;
     let pokemonList;
+
+    console.log(pokemon);
 
     pokemonList = (
       <table className = "table table-bordered">
        <tbody>
        <tr>
         <th>Id</th>
+        <th>Name</th>
         <th>Image</th>
        </tr>
           {pokemon.map((monster, index) =>
